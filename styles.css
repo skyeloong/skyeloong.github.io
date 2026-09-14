@@ -257,6 +257,7 @@ h1 {
   border-radius: 2px;
 }
 .publication-action-primary:hover { color: #ffffff; background: var(--link-dark); text-decoration: none; }
+.published-work + .published-work { margin-top: 28px; }
 .published-work + .work { margin-top: 20px; }
 .work { display: grid; grid-template-columns: 105px 1fr; gap: 24px; padding: 31px 0; border-top: 1px solid var(--line); }
 .work:first-of-type { margin-top: 20px; }
