@@ -55,26 +55,28 @@
     </header>
 
     <main class="page-shell" id="home">
+      <section class="author-hero" aria-label="Introduction">
       <aside class="profile" aria-label="Profile">
+        <div class="profile-identity">
         <img class="portrait" src="avatar.jpg" alt="Skye Loong" width="721" height="721" />
         <h2 data-i18n="profileName">Skye Loong</h2>
         <p class="profile-role" data-i18n="profileRole">Science Fiction Writer</p>
         <p class="profile-bio" data-i18n="profileBio">Writing speculative stories about time, consciousness, technology, and the lives we might have lived.</p>
         <ul class="profile-links">
-          <li><span aria-hidden="true">⌖</span><span data-i18n="location">United States</span></li>
           <li><span aria-hidden="true">✉</span><a href="mailto:skyeloong@hotmail.com">skyeloong@hotmail.com</a></li>
           <li><span aria-hidden="true">⌘</span><a href="https://github.com/skyeloong">GitHub</a></li>
           <li><span aria-hidden="true">◉</span><a href="https://www.douban.com/people/185140674/doulists/all" data-i18n="douban">Douban</a></li>
         </ul>
+        </div>
       </aside>
 
-      <div class="content">
         <section class="intro" aria-labelledby="page-title">
           <p class="kicker" data-i18n="kicker">Hello, I’m Skye.</p>
           <h1 id="page-title" data-i18n="heroTitle">I’m a science fiction writer.</h1>
           <p class="lead" data-i18n="lead">I write stories about people encountering ideas larger than themselves—time, intelligence, consciousness, memory, evolution, and other forms of the unknown.</p>
           <p data-i18n="introCopy">This is where I collect my fiction, notes, and works in progress. Some begin as scientific questions. Others begin with an image, a feeling, or a world that refuses to disappear.</p>
         </section>
+      </section>
 
         <section class="writing" id="writing" aria-labelledby="writing-title">
           <div class="section-heading">
@@ -82,19 +84,19 @@
             <p data-i18n="writingIntro">Fiction and works in progress.</p>
           </div>
 
-          <div class="series-heading">
-            <p class="series-label" data-i18n="seriesLabel">Series 01</p>
-            <h3 data-i18n="seriesTitle">The Ring of Time</h3>
-            <p data-i18n="seriesMeta">时间之环</p>
-          </div>
-
-          <article class="work">
-            <div class="work-date" data-i18n="comingSoon">Complete · On submission</div>
-            <div class="work-content">
-              <h3><a href="#writing" data-i18n="storyOneTitle">She Smelled a Rain of Time</a></h3>
+          <article class="published-work">
+            <div class="publication-cover" role="img" aria-label="Magazine cover not yet provided">
+              <span>Magazine cover</span>
+            </div>
+            <div class="published-work-content">
+              <h3 data-i18n="storyOneTitle">She Smelled a Rain of Time</h3>
               <p class="work-translation" data-i18n="storyOneAltTitle">她闻到了一场时间雨</p>
-              <p data-i18n="storyOnePublication">Currently seeking publication.</p>
-              <ul class="work-tags" aria-label="Themes"><li data-i18n="tagSynesthesia">Synesthesia</li><li data-i18n="tagTime">Time</li><li data-i18n="tagConsciousness">Consciousness</li></ul>
+              <dl class="publication-meta">
+                <div><dt>Publication</dt><dd>Publication to be announced.</dd></div>
+                <div><dt>Date / Issue</dt><dd>Publication date and issue forthcoming.</dd></div>
+                <div><dt>Length</dt><dd>Word count to be added.</dd></div>
+                <div class="publication-description"><dt>Summary</dt><dd>Story summary coming soon.</dd></div>
+              </dl>
             </div>
           </article>
 
@@ -229,7 +231,6 @@
           </article>
         </section>
 
-      </div>
     </main>
 
     <footer class="site-footer">
