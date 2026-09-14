@@ -476,13 +476,29 @@ html[lang="zh-CN"] .film-title { font-style: normal; }
   .page-shell { padding: 44px 0 70px; }
   .author-hero { display: block; padding-bottom: 52px; }
   .profile { display: block; }
-  .profile-identity { display: block; width: 104px; }
-  .portrait { width: 104px; height: 104px; margin: 0; font-size: 1.35rem; }
-  .profile h2 { margin-top: 16px; }
-  .profile-links { display: none; }
+  .profile-identity {
+    display: grid;
+    grid-template-columns: 104px minmax(0, 1fr);
+    column-gap: 22px;
+    width: 100%;
+    text-align: left;
+  }
+  .portrait { grid-row: 1 / 3; width: 104px; height: 104px; margin: 0; font-size: 1.35rem; }
+  .profile h2 { align-self: end; margin: 0; white-space: nowrap; }
+  .profile-links {
+    display: flex;
+    grid-column: 2;
+    gap: 5px;
+    margin: 12px 0 0;
+    padding: 12px 0 0;
+  }
   .intro { margin-top: 34px; }
   .published-work { grid-template-columns: 1fr; gap: 24px; padding: 24px; }
   .publication-cover { width: 140px; margin: 0 auto; }
+  .published-work-content > h3,
+  .published-work-content > .work-translation { text-align: center; }
+  .published-work .work-tags { justify-content: center; }
+  .published-work .publication-actions { justify-content: center; }
   .work { grid-template-columns: 1fr; gap: 5px; }
   .work-date { padding: 0; }
   .blank-note {
@@ -501,8 +517,7 @@ html[lang="zh-CN"] .film-title { font-style: normal; }
 @media (max-width: 480px) {
   .site-name { font-size: 0.84rem; }
   .page-shell { padding-top: 34px; }
-  .profile { grid-template-columns: 82px 1fr; column-gap: 17px; }
-  .profile-identity { width: 82px; }
+  .profile-identity { grid-template-columns: 82px minmax(0, 1fr); column-gap: 17px; }
   .portrait { width: 82px; height: 82px; font-size: 1.05rem; }
   .profile-bio { font-size: 0.76rem; }
   h1 { font-size: 2.05rem; }
