@@ -482,7 +482,7 @@ html[lang="zh-CN"] .film-title { font-style: normal; }
   .profile-links { display: none; }
   .intro { margin-top: 34px; }
   .published-work { grid-template-columns: 1fr; gap: 24px; padding: 24px; }
-  .publication-cover { width: 140px; }
+  .publication-cover { width: 140px; margin: 0 auto; }
   .work { grid-template-columns: 1fr; gap: 5px; }
   .work-date { padding: 0; }
   .blank-note {
