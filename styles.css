@@ -221,9 +221,22 @@ h1 {
   font-size: 0.76rem;
   letter-spacing: 0.04em;
 }
+.publication-cover:hover {
+  color: var(--link);
+  border-color: #b9cbd4;
+  text-decoration: none;
+}
 .published-work-content { min-width: 0; }
 .published-work-content h3 { margin: 0 0 1px; font-size: 1.46rem; line-height: 1.35; }
-.publication-meta { margin: 24px 0 0; border-top: 1px solid #dce1e4; }
+.published-work .work-tags { gap: 8px; margin: 16px 0 0; }
+.published-work .work-tags li {
+  padding: 3px 10px;
+  color: #5d6b73;
+  background: #ffffff;
+  border: 1px solid #d9e0e4;
+  border-radius: 999px;
+}
+.publication-meta { margin: 20px 0 0; border-top: 1px solid #dce1e4; }
 .publication-meta > div {
   display: grid;
   grid-template-columns: 105px minmax(0, 1fr);
@@ -235,12 +248,20 @@ h1 {
 .publication-meta dt { color: var(--faint); font-size: 0.71rem; }
 .publication-meta dd { min-height: 1.25em; margin: 0; color: #44494d; font-family: var(--serif); font-size: 0.88rem; }
 .publication-description { min-height: 66px !important; }
+.publication-actions { display: flex; flex-wrap: wrap; gap: 12px 22px; align-items: center; margin-top: 22px; }
+.publication-actions a { font-size: 0.78rem; font-weight: 600; }
+.publication-action-primary {
+  padding: 7px 12px;
+  color: #ffffff;
+  background: var(--link);
+  border-radius: 2px;
+}
+.publication-action-primary:hover { color: #ffffff; background: var(--link-dark); text-decoration: none; }
 .published-work + .work { margin-top: 20px; }
 .work { display: grid; grid-template-columns: 105px 1fr; gap: 24px; padding: 31px 0; border-top: 1px solid var(--line); }
 .work:first-of-type { margin-top: 20px; }
 .work-date { padding-top: 5px; color: var(--faint); font-size: 0.71rem; }
 .work-content h3 { margin: 0 0 1px; font-size: 1.24rem; font-weight: 600; }
-.work-content h3 a { color: var(--link); }
 .work-translation { margin: 0 0 10px !important; color: var(--faint) !important; font-family: var(--serif); font-size: 0.84rem !important; font-style: italic; }
 .work-content > p { margin: 0; color: var(--muted); font-size: 0.86rem; }
 .work-tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 15px 0 0; padding: 0; list-style: none; }

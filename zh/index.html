@@ -43,7 +43,7 @@
         <nav class="site-nav" aria-label="主导航">
           <a href="#home" data-i18n="navHome">首页</a>
           <a href="#writing" data-i18n="navWriting">小说</a>
-          <a href="#notes" data-i18n="navNotes">随笔</a>
+          <a href="#notes" data-i18n="navNotes">资源</a>
           <a href="#news" data-i18n="navNews">动态</a>
           <div class="language-switch" aria-label="语言选择">
             <a href="/" lang="en">EN</a>
@@ -74,34 +74,39 @@
           <p class="kicker" data-i18n="kicker">你好！</p>
           <h1 id="page-title" data-i18n="heroTitle">我是一名科幻小说作者。</h1>
           <p class="lead" data-i18n="lead">我写人在遭遇比自身更宏大的观念时所发生的故事——时间、智能、意识、记忆、进化，以及未知的其他形态。</p>
-          <p data-i18n="introCopy">这里收集我的小说、随笔和正在创作的作品。有些故事始于一个科学问题，另一些始于一幅画面、一种感受，或一个始终不愿消失的世界。</p>
+          <p data-i18n="introCopy">这里收集我的小说、资源和正在创作的作品。有些故事始于一个科学问题，另一些始于一幅画面、一种感受，或一个始终不愿消失的世界。</p>
         </section>
       </section>
 
         <section class="writing" id="writing" aria-labelledby="writing-title">
           <div class="section-heading">
-            <h2 id="writing-title" data-i18n="writingTitle">小说选集</h2>
+            <h2 id="writing-title" data-i18n="writingTitle">小说</h2>
             <p data-i18n="writingIntro">已经完成和正在创作的故事。</p>
           </div>
-          <article class="published-work">
-            <div class="publication-cover" role="img" aria-label="杂志封面尚未提供">
+          <article class="published-work" id="story-rain-of-time">
+            <a class="publication-cover" href="#story-rain-of-time" aria-label="打开《她闻到了一场时间雨》">
               <span>杂志封面</span>
-            </div>
+            </a>
             <div class="published-work-content">
               <h3 data-i18n="storyOneTitle">她闻到了一场时间雨</h3>
               <p class="work-translation" data-i18n="storyOneAltTitle">She Smelled a Rain of Time</p>
+              <ul class="work-tags" aria-label="主题"><li data-i18n="tagSynesthesia">通感</li><li data-i18n="tagTime">时间</li><li data-i18n="tagConsciousness">意识</li></ul>
               <dl class="publication-meta">
                 <div><dt>发表平台</dt><dd>发表平台待公布。</dd></div>
-                <div><dt>时间 / 期次</dt><dd>发表时间与期次待定。</dd></div>
+                <div><dt>发表时间</dt><dd>发表时间待定。</dd></div>
                 <div><dt>篇幅</dt><dd>作品字数待补充。</dd></div>
                 <div class="publication-description"><dt>简介</dt><dd>作品简介即将补充。</dd></div>
               </dl>
+              <div class="publication-actions">
+                <a class="publication-action-primary" href="#story-rain-of-time">在线阅读 →</a>
+                <a href="#story-rain-of-time">购买本期 →</a>
+              </div>
             </div>
           </article>
           <article class="work">
             <div class="work-date" data-i18n="inProgress">创作中</div>
             <div class="work-content">
-              <h3><a href="#writing" data-i18n="storyTwoTitle">世界树下的祈祷舞</a></h3>
+              <h3 data-i18n="storyTwoTitle">世界树下的祈祷舞</h3>
               <p class="work-translation" data-i18n="storyTwoAltTitle">A Prayer Dance Beneath the World Tree</p>
               <p data-i18n="storyTwo">将发表于《XXX》杂志第 XX 期。</p>
               <ul class="work-tags" aria-label="主题"><li data-i18n="tagEvolution">进化</li><li data-i18n="tagBelief">信仰</li><li data-i18n="tagScale">尺度</li></ul>
@@ -110,7 +115,7 @@
           <article class="work">
             <div class="work-date" data-i18n="workingTitle">暂定标题</div>
             <div class="work-content">
-              <h3><a href="#writing" data-i18n="storyThreeTitle">XXXXXX遗忘</a></h3>
+              <h3 data-i18n="storyThreeTitle">XXXXXX遗忘</h3>
               <p class="work-translation" data-i18n="storyThreeAltTitle">XXXXXX Forgotten</p>
               <p data-i18n="publicationPending">发表信息待定。</p>
             </div>
@@ -118,7 +123,7 @@
           <article class="work">
             <div class="work-date" data-i18n="workingTitle">暂定标题</div>
             <div class="work-content">
-              <h3><a href="#writing" data-i18n="storyFourTitle">XXXX叫醒我</a></h3>
+              <h3 data-i18n="storyFourTitle">XXXX叫醒我</h3>
               <p class="work-translation" data-i18n="storyFourAltTitle">XXXX, Wake Me</p>
               <p data-i18n="publicationPending">发表信息待定。</p>
             </div>
@@ -127,7 +132,7 @@
 
         <section class="notes" id="notes" aria-labelledby="notes-title">
           <div class="section-heading">
-            <h2 id="notes-title" data-i18n="notesTitle">随笔</h2>
+            <h2 id="notes-title" data-i18n="notesTitle">资源</h2>
             <p data-i18n="notesIntro">关于书籍、影视、游戏、音乐与观念的推荐和文字。</p>
           </div>
           <div class="series-heading">
@@ -137,7 +142,7 @@
           </div>
           <ol class="notes-list">
             <li class="note-entry"><h3><a href="notes/science-fiction-awards.html" data-i18n="noteTwentyFiveTitle">2026 科幻小说奖项汇总</a></h3></li>
-            <li class="note-entry"><h3><a href="notes/chinese-science-fiction-magazines.html" data-i18n="noteTwentySixTitle">中文科幻小说投稿指南：杂志与出版平台</a></h3></li>
+            <li class="note-entry"><h3><a href="notes/chinese-science-fiction-magazines.html" data-i18n="noteTwentySixTitle">中文科幻小说投稿指南</a></h3></li>
             <li class="note-entry"><h3><a href="notes/science-fiction-writer-websites.html" data-i18n="noteTwentySevenTitle">科幻作家个人网站</a></h3></li>
           </ol>
           <div class="series-heading">
