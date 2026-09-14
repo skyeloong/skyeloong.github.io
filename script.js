@@ -1,7 +1,7 @@
 const translations = {
   en: {
     navHome: "Home",
-    navWriting: "Writing",
+    navWriting: "Fiction",
     navNotes: "Resources",
     navNews: "News",
     profileName: "Skye Loong",
@@ -13,8 +13,8 @@ const translations = {
     heroTitle: "I’m a science fiction writer.",
     lead: "I write stories about people encountering ideas larger than themselves—time, intelligence, consciousness, memory, evolution, and other forms of the unknown.",
     introCopy: "This is where I collect my fiction, resources, and works in progress. Some begin as scientific questions. Others begin with an image, a feeling, or a world that refuses to disappear.",
-    writingTitle: "Writing",
-    writingIntro: "Fiction and works in progress.",
+    writingTitle: "Fiction",
+    writingIntro: "Published stories and works in progress.",
     seriesLabel: "Series 01",
     seriesTitle: "The Ring of Time",
     seriesMeta: "时间之环",
@@ -134,7 +134,7 @@ const translations = {
     lead: "我写人在遭遇比自身更宏大的观念时所发生的故事——时间、智能、意识、记忆、进化，以及未知的其他形态。",
     introCopy: "这里收集我的小说、资源和正在创作的作品。有些故事始于一个科学问题，另一些始于一幅画面、一种感受，或一个始终不愿消失的世界。",
     writingTitle: "小说",
-    writingIntro: "已经完成和正在创作的故事。",
+    writingIntro: "已发表和正在创作的故事。",
     seriesLabel: "系列 01",
     seriesTitle: "时间之环",
     seriesMeta: "The Ring of Time",
