@@ -277,6 +277,44 @@ h1 {
 .note-entry::marker { font-family: var(--serif); font-size: 1.05rem; }
 .note-entry h3 { display: inline; margin: 0; font-size: 1.05rem; font-weight: 600; }
 .note-entry h3 a { color: var(--link); }
+.featured-resources-list { max-width: 760px; }
+.resources-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.resources-title-row h2 { flex: 0 0 auto; }
+.view-all-resources {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex: 0 0 auto;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.view-all-resources:hover {
+  border-bottom-color: currentColor;
+  text-decoration: none;
+}
+.resource-index-page { padding-top: 64px; }
+.resource-index {
+  max-width: 880px;
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+.resource-page-heading { max-width: 720px; margin-bottom: 44px; }
+.resource-page-heading h1 {
+  margin-bottom: 14px;
+  font-size: clamp(1.65rem, 3vw, 2.25rem);
+  line-height: 1.22;
+  letter-spacing: -0.025em;
+}
+.resource-page-heading > p:last-child { margin: 0; color: var(--muted); font-family: var(--serif); font-size: 1.08rem; line-height: 1.65; }
 .news-item {
   display: grid;
   grid-template-columns: 105px 1fr;
@@ -498,6 +536,8 @@ html[lang="zh-CN"] .film-title { font-style: normal; }
     padding: 12px 0 0;
   }
   .intro { margin-top: 34px; }
+  .resources-title-row { gap: 16px; }
+  .view-all-resources { padding-bottom: 0; white-space: nowrap; }
   .published-work { grid-template-columns: 1fr; gap: 24px; padding: 24px; }
   .publication-cover { width: 140px; margin: 0 auto; }
   .published-work-content > h3,
