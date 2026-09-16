@@ -170,6 +170,10 @@ a:hover { color: var(--link-dark); text-decoration: underline; text-underline-of
 }
 .profile-links li { display: flex; gap: 8px; align-items: baseline; margin: 0; color: var(--muted); font-size: 0.77rem; }
 .profile-links li > span:first-child { width: 13px; color: #989da1; text-align: center; }
+.profile-icon { width: 14px; height: 14px; flex: 0 0 14px; align-self: center; }
+.profile-icon--email { object-fit: contain; }
+.profile-icon--github { fill: #181717; transform: scale(1.12); transform-origin: center; }
+.profile-icon--douban { fill: #2e963d; }
 
 .intro {
   grid-column: 2;
