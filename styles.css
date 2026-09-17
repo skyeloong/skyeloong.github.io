@@ -237,7 +237,12 @@ h1 {
   border-color: #b9cbd4;
   text-decoration: none;
 }
-.published-work-content { min-width: 0; }
+.published-work-content {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+}
 .published-work-content h3 { margin: 0 0 1px; font-size: 1.46rem; line-height: 1.35; }
 .published-work-content > h3,
 .published-work-content > .work-translation { text-align: center; }
@@ -263,7 +268,7 @@ h1 {
 .publication-meta dt { color: var(--faint); font-size: 0.71rem; }
 .publication-meta dd { min-height: 1.25em; margin: 0; color: #44494d; font-family: var(--serif); font-size: 0.88rem; }
 .publication-description { min-height: 66px !important; }
-.publication-actions { display: flex; flex-wrap: wrap; gap: 12px 22px; align-items: center; margin-top: 22px; }
+.publication-actions { display: flex; flex-wrap: wrap; gap: 12px 22px; align-items: center; margin-top: auto; padding-top: 22px; }
 .publication-actions a { font-size: 0.78rem; font-weight: 600; }
 .publication-action-primary {
   padding: 7px 12px;
@@ -327,6 +332,7 @@ h1 {
 }
 .resource-page-heading > p:last-child { margin: 0; color: var(--muted); font-family: var(--serif); font-size: 1.08rem; line-height: 1.65; }
 .fiction-index-page { padding-top: 64px; }
+.fiction-index-page.page-shell { width: min(calc(100% - 48px), 1440px); }
 .fiction-page-heading { max-width: 720px; margin-bottom: 44px; }
 .fiction-page-heading h1 {
   margin-bottom: 14px;
@@ -337,11 +343,26 @@ h1 {
 .fiction-page-heading > p:last-child { margin: 0; color: var(--muted); font-family: var(--serif); font-size: 1.08rem; line-height: 1.65; }
 .fiction-catalog {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
 }
 .fiction-catalog .published-work { padding: 24px; }
 .fiction-catalog .publication-cover { width: 150px; }
+.fiction-catalog .published-work-content h3 { font-size: 1.16rem; }
+.fiction-catalog .publication-meta > div {
+  grid-template-columns: 82px minmax(0, 1fr);
+  gap: 10px;
+}
+.fiction-catalog .publication-actions { gap: 10px 14px; }
+
+@media (max-width: 1100px) {
+  .fiction-catalog { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fiction-catalog .published-work-content h3 { font-size: 1.34rem; }
+  .fiction-catalog .publication-meta > div {
+    grid-template-columns: 105px minmax(0, 1fr);
+    gap: 16px;
+  }
+}
 .news-item {
   display: grid;
   grid-template-columns: 105px 1fr;
