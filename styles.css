@@ -190,6 +190,18 @@ h1 {
   line-height: 1.08;
   letter-spacing: -0.038em;
 }
+.intro h1 { margin-bottom: 14px; }
+.author-names {
+  max-width: 650px;
+}
+.author-names strong {
+  color: inherit;
+  font-family: inherit;
+  font-weight: 600;
+}
+.author-names strong[lang="zh-Hans"] {
+  font-family: "Noto Sans SC", sans-serif;
+}
 .lead { margin: 0 0 23px; color: #3e4246; font-family: var(--serif); font-size: 1.22rem; line-height: 1.62; }
 .intro > p:last-child { max-width: 640px; margin: 0; color: var(--muted); }
 .writing, .notes, .news {
