@@ -50,15 +50,16 @@ a:hover { color: var(--link-dark); text-decoration: underline; text-underline-of
   font-weight: 600;
   letter-spacing: -0.015em;
 }
-.site-name span {
+.site-name-zh {
   color: var(--ink);
   font-family: "Noto Sans SC", sans-serif;
   font-size: inherit;
   font-weight: 600;
   letter-spacing: 0;
 }
+.site-name > a { color: var(--ink); }
 .site-name i { color: #a8abad; font-style: normal; font-weight: 400; }
-.site-name:hover { text-decoration: none; }
+.site-name > a:hover { color: var(--ink); text-decoration: none; }
 .nav-toggle {
   display: none;
   width: 42px;
@@ -333,7 +334,7 @@ h1 {
   border-bottom-color: currentColor;
   text-decoration: none;
 }
-.resource-index-page { padding-top: 64px; }
+.resource-index-page.page-shell { padding-top: 36px; }
 .resource-index {
   max-width: 880px;
   margin-top: 0;
@@ -348,8 +349,10 @@ h1 {
   letter-spacing: -0.025em;
 }
 .resource-page-heading > p:last-child { margin: 0; color: var(--muted); font-family: var(--serif); font-size: 1.08rem; line-height: 1.65; }
-.fiction-index-page { padding-top: 64px; }
-.fiction-index-page.page-shell { width: min(calc(100% - 48px), 1440px); }
+.fiction-index-page.page-shell {
+  width: min(calc(100% - 48px), var(--max));
+  padding-top: 36px;
+}
 .fiction-page-heading { max-width: 720px; margin-bottom: 44px; }
 .fiction-page-heading h1 {
   margin-bottom: 14px;
