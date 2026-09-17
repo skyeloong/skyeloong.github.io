@@ -326,6 +326,22 @@ h1 {
   letter-spacing: -0.025em;
 }
 .resource-page-heading > p:last-child { margin: 0; color: var(--muted); font-family: var(--serif); font-size: 1.08rem; line-height: 1.65; }
+.fiction-index-page { padding-top: 64px; }
+.fiction-page-heading { max-width: 720px; margin-bottom: 44px; }
+.fiction-page-heading h1 {
+  margin-bottom: 14px;
+  font-size: clamp(1.65rem, 3vw, 2.25rem);
+  line-height: 1.22;
+  letter-spacing: -0.025em;
+}
+.fiction-page-heading > p:last-child { margin: 0; color: var(--muted); font-family: var(--serif); font-size: 1.08rem; line-height: 1.65; }
+.fiction-catalog {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.fiction-catalog .published-work { padding: 24px; }
+.fiction-catalog .publication-cover { width: 150px; }
 .news-item {
   display: grid;
   grid-template-columns: 105px 1fr;
@@ -384,6 +400,7 @@ h1 {
 .article-item-title { margin: 0; }
 .film-title { font-style: italic; }
 html[lang="zh-CN"] .film-title { font-style: normal; }
+
 .article-summary {
   margin: 8px 0 0;
   color: var(--muted);
@@ -550,6 +567,7 @@ html[lang="zh-CN"] .film-title { font-style: normal; }
   .resources-title-row { gap: 16px; }
   .view-all-resources { padding-bottom: 0; white-space: nowrap; }
   .writing { grid-template-columns: 1fr; }
+  .fiction-catalog { grid-template-columns: 1fr; }
   .published-work { gap: 24px; padding: 24px; }
   .publication-cover { width: 140px; margin: 0 auto; }
   .work { grid-template-columns: 1fr; gap: 5px; }
