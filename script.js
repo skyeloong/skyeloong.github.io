@@ -367,6 +367,85 @@ if (fictionSearchInput && fictionCatalog) {
   fictionSearchInput.addEventListener("search", updateFictionResults);
 }
 
+const resourceSearchInput = document.querySelector("#resource-search-input");
+const resourceCatalog = document.querySelector("#resource-catalog");
+
+if (resourceSearchInput && resourceCatalog) {
+  const groups = [];
+  const entries = [];
+  const children = [...resourceCatalog.children];
+
+  for (let index = 0; index < children.length; index += 1) {
+    const heading = children[index];
+    const list = children[index + 1];
+    if (!heading.classList.contains("series-heading") || !list?.classList.contains("notes-list")) continue;
+
+    const groupEntries = [...list.querySelectorAll(".note-entry")];
+    const groupText = heading.textContent.normalize("NFKC").toLocaleLowerCase();
+    groupEntries.forEach((entry) => {
+      entry.dataset.searchText = `${groupText} ${entry.textContent}`.normalize("NFKC").toLocaleLowerCase();
+      entry.dataset.resourcePath = new URL(entry.querySelector("a").href).pathname;
+      entries.push(entry);
+    });
+    groups.push({ heading, list, entries: groupEntries });
+  }
+
+  const status = document.querySelector("#resource-search-status");
+  const emptyMessage = resourceCatalog.querySelector(".resource-empty");
+  const isChinese = document.documentElement.lang.startsWith("zh");
+  let fullTextReady = false;
+
+  const updateResourceResults = () => {
+    const query = resourceSearchInput.value.trim().normalize("NFKC").toLocaleLowerCase();
+    let visibleCount = 0;
+
+    entries.forEach((entry) => {
+      const matches = !query || entry.dataset.searchText.includes(query);
+      entry.hidden = !matches;
+      if (matches) visibleCount += 1;
+    });
+
+    groups.forEach((group) => {
+      const hasMatches = group.entries.some((entry) => !entry.hidden);
+      group.heading.hidden = !hasMatches;
+      group.list.hidden = !hasMatches;
+    });
+
+    emptyMessage.hidden = visibleCount !== 0;
+    status.hidden = !query;
+    if (query && !fullTextReady) {
+      status.textContent = isChinese ? "正在搜索全文…" : "Searching full text…";
+    } else {
+      status.textContent = isChinese
+        ? `共 ${visibleCount} 项`
+        : `${visibleCount} ${visibleCount === 1 ? "result" : "results"}`;
+    }
+  };
+
+  resourceSearchInput.addEventListener("input", updateResourceResults);
+  resourceSearchInput.addEventListener("search", updateResourceResults);
+
+  fetch("/resource-search-index.json?v=20260920-1")
+    .then((response) => {
+      if (!response.ok) throw new Error("Resource search index could not be loaded");
+      return response.json();
+    })
+    .then((searchIndex) => {
+      entries.forEach((entry) => {
+        const pageText = searchIndex[entry.dataset.resourcePath] || "";
+        entry.dataset.searchText = `${entry.dataset.searchText} ${pageText}`
+          .normalize("NFKC")
+          .toLocaleLowerCase();
+      });
+      fullTextReady = true;
+      updateResourceResults();
+    })
+    .catch(() => {
+      fullTextReady = true;
+      updateResourceResults();
+    });
+}
+
 const contactForm = document.querySelector("[data-contact-form]");
 
 if (contactForm) {

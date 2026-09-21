@@ -467,12 +467,15 @@ h1 {
   justify-content: space-between;
   margin: -16px 0 36px;
 }
-.fiction-search {
+.fiction-search,
+.resource-search {
   position: relative;
   display: grid;
   width: min(100%, 520px);
 }
-.fiction-search-icon {
+.resource-search { margin: -16px 0 36px; }
+.fiction-search-icon,
+.resource-search-icon {
   position: absolute;
   top: 14px;
   left: 15px;
@@ -482,7 +485,8 @@ h1 {
   border-radius: 50%;
   pointer-events: none;
 }
-.fiction-search-icon::after {
+.fiction-search-icon::after,
+.resource-search-icon::after {
   position: absolute;
   right: -5px;
   bottom: -3px;
@@ -493,7 +497,8 @@ h1 {
   transform: rotate(45deg);
   transform-origin: left center;
 }
-.fiction-search input {
+.fiction-search input,
+.resource-search input {
   width: 100%;
   height: 46px;
   padding: 0 16px 0 44px;
@@ -505,23 +510,34 @@ h1 {
   outline: none;
   transition: border-color 160ms ease, box-shadow 160ms ease;
 }
-.fiction-search input::placeholder { color: #5f666c; }
-.fiction-search input:hover {
+.fiction-search input::placeholder,
+.resource-search input::placeholder { color: #5f666c; }
+.fiction-search input:hover,
+.resource-search input:hover {
   background: #ffffff;
   border-color: #87939a;
 }
-.fiction-search input:focus {
+.fiction-search input:focus,
+.resource-search input:focus {
   background: #ffffff;
   border-color: var(--link);
   box-shadow: 0 0 0 3px rgba(47, 111, 145, 0.1);
 }
-.fiction-search-status {
+.fiction-search-status,
+.resource-search-status {
   justify-self: start;
   margin: 6px 1px 0;
   color: var(--faint);
   font-size: 0.7rem;
 }
-.fiction-search-status[hidden] { display: none; }
+.fiction-search-status[hidden],
+.resource-search-status[hidden] { display: none; }
+.resource-empty {
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 1rem;
+}
 .fiction-view-toggle {
   display: inline-flex;
   height: 46px;
@@ -1033,7 +1049,8 @@ html[lang="zh-CN"] .film-title { font-style: normal; }
   .view-all-resources { padding-bottom: 0; white-space: nowrap; }
   .writing { grid-template-columns: 1fr; }
   .fiction-controls { flex-direction: column; gap: 14px; margin-bottom: 34px; }
-  .fiction-search { width: 100%; }
+  .fiction-search,
+  .resource-search { width: 100%; }
   .fiction-view-toggle {
     width: 100%;
     align-self: stretch;

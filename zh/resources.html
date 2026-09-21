@@ -18,8 +18,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../styles.css?v=20260920-1" />
-    <script src="../script.js?v=20260920-1" defer></script>
+    <link rel="stylesheet" href="../styles.css?v=20260920-2" />
+    <script src="../script.js?v=20260920-2" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -46,6 +46,15 @@
           <h1 id="resources-title">资源</h1>
           <p>科幻写作指南，以及关于科幻、奇幻、游戏、音乐与观念的精选推荐。</p>
         </div>
+
+        <div class="resource-search" role="search">
+          <label class="visually-hidden" for="resource-search-input">搜索资源</label>
+          <span class="resource-search-icon" aria-hidden="true"></span>
+          <input id="resource-search-input" type="search" placeholder="搜索资源或主题…" autocomplete="off" aria-controls="resource-catalog" />
+          <p class="resource-search-status" id="resource-search-status" aria-live="polite" hidden></p>
+        </div>
+
+        <div id="resource-catalog">
 
         <div class="series-heading"><p class="series-label">系列 01</p><h2>科幻小说指南</h2><p>奖项 · 杂志 · 投稿</p></div>
         <ol class="notes-list">
@@ -91,6 +100,8 @@
 
         <div class="series-heading"><p class="series-label">系列 05</p><h2>音乐推荐</h2><p>乐队 · 专辑 · 现场</p></div>
         <ol class="notes-list"><li class="note-entry"><h3><a href="resources/heavy-metal.html">金属</a></h3></li></ol>
+        <p class="resource-empty" hidden>没有找到匹配的资源。</p>
+        </div>
       </section>
     </main>
 
