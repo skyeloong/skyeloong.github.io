@@ -1143,7 +1143,7 @@ html[lang="zh-CN"] .film-title { font-style: normal; }
 }
 
 @media (max-width: 480px) {
-  .site-name { font-size: 0.84rem; }
+  .site-name { font-size: 1rem; }
   .page-shell { padding-top: 34px; }
   .profile-identity { grid-template-columns: 82px minmax(0, 1fr); column-gap: 17px; }
   .portrait { width: 82px; height: 82px; font-size: 1.05rem; }
