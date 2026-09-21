@@ -95,7 +95,7 @@ a:hover { color: var(--link-dark); text-decoration: underline; text-underline-of
 .site-nav > a {
   position: relative;
   color: #4f5357;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 .site-nav > a::after {
@@ -116,7 +116,7 @@ a:hover { color: var(--link-dark); text-decoration: underline; text-underline-of
   gap: 7px;
   margin-left: 8px;
   color: #b1b4b7;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
 }
 .language-switch button,
 .language-switch a {
@@ -192,17 +192,24 @@ a:hover { color: var(--link-dark); text-decoration: underline; text-underline-of
   max-width: 710px;
   padding-top: 34px;
 }
-.kicker { margin: 0 0 8px; color: var(--link); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.03em; }
 h1, h2, h3 { font-family: var(--serif); }
 h1 {
   max-width: 650px;
   margin: 0 0 26px;
-  font-size: clamp(2rem, 3vw, 2.75rem);
+  font-size: clamp(2.15rem, 4vw, 3.4rem);
   font-weight: 600;
-  line-height: 1.16;
-  letter-spacing: -0.025em;
+  line-height: 1.08;
+  letter-spacing: -0.038em;
 }
-.intro h1 { margin-bottom: 18px; }
+.intro h1 {
+  margin-bottom: 18px;
+  color: var(--link);
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
 .author-names {
   max-width: 650px;
 }
@@ -214,7 +221,9 @@ h1 {
 .author-names strong[lang="zh-Hans"] {
   font-family: "Noto Sans SC", sans-serif;
 }
-.lead { margin: 0 0 23px; color: #3e4246; font-family: var(--serif); font-size: 1.22rem; line-height: 1.62; }
+.lead { margin: 0 0 23px; color: #3e4246; font-family: var(--serif); font-size: 1.28rem; line-height: 1.62; }
+.intro .lead { margin-bottom: 12px; }
+.intro .lead:last-child { margin-bottom: 0; }
 .writing, .notes, .news {
   width: 100%;
   padding: 58px 0 18px;
@@ -1054,14 +1063,14 @@ html[lang="zh-CN"] .film-title { font-style: normal; }
   .nav-ready .site-nav > a {
     padding: 11px 0;
     border-bottom: 1px solid var(--line);
-    font-size: 0.88rem;
+    font-size: 0.92rem;
   }
   .nav-ready .site-nav > a::after { display: none; }
   .nav-ready .language-switch {
     justify-content: flex-start;
     gap: 9px;
     margin: 12px 0 0;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
   body.nav-open { overflow: hidden; }
   .page-shell { padding: 44px 0 70px; }
