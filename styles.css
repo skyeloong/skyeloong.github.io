@@ -753,13 +753,13 @@ h1 {
   color: var(--faint);
   content: "·";
 }
-.fiction-catalog.is-list-view .publication-meta dt { color: var(--muted); font-weight: 500; }
+.fiction-catalog.is-list-view .publication-meta dt { color: var(--muted); font-size: 0.92rem; font-weight: 500; }
 .fiction-catalog.is-list-view .publication-meta dt::after { content: ":"; }
 .fiction-catalog.is-list-view .publication-meta dd {
   min-height: 0;
   color: var(--muted);
   font-family: var(--sans);
-  font-size: 0.74rem;
+  font-size: 0.95rem;
 }
 .fiction-catalog.is-list-view .publication-actions {
   grid-column: 2;
@@ -834,13 +834,13 @@ h1 {
   color: var(--faint);
   content: "·";
 }
-.home-fiction-list .publication-meta dt { color: var(--muted); font-weight: 500; }
+.home-fiction-list .publication-meta dt { color: var(--muted); font-size: 0.92rem; font-weight: 500; }
 .home-fiction-list .publication-meta dt::after { content: ":"; }
 .home-fiction-list .publication-meta dd {
   min-height: 0;
   color: var(--muted);
   font-family: var(--sans);
-  font-size: 0.74rem;
+  font-size: 0.95rem;
 }
 .home-fiction-list .publication-actions {
   grid-column: 2;
