@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;800&display=swap");
 
 :root {
   --ink: #222426;
@@ -656,6 +656,7 @@ h1 {
   padding-bottom: 12px;
   border-bottom: 1px solid var(--line);
   font-size: 1.25rem;
+  font-weight: 600;
 }
 .fiction-group-title:first-child { margin-top: 0; }
 .fiction-catalog .published-work { padding: 24px; }
