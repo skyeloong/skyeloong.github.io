@@ -201,7 +201,8 @@ h1 {
   line-height: 1.08;
   letter-spacing: -0.038em;
 }
-.intro h1 {
+.intro-greeting {
+  margin-top: 0;
   margin-bottom: 18px;
   color: var(--link);
   font-family: var(--sans);
