@@ -62,9 +62,9 @@ a:hover { color: var(--link-dark); text-decoration: underline; text-underline-of
 }
 .site-name-zh {
   color: var(--ink);
-  font-family: "Noto Sans SC", sans-serif;
+  font-family: inherit;
   font-size: inherit;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 0;
 }
 .site-name > a { color: var(--ink); }
@@ -218,9 +218,7 @@ h1 {
   font-family: inherit;
   font-weight: 600;
 }
-.author-names strong[lang="zh-Hans"] {
-  font-family: "Noto Sans SC", sans-serif;
-}
+.author-names strong[lang="zh-Hans"] { font-weight: 800; }
 .lead { margin: 0 0 23px; color: #3e4246; font-family: var(--serif); font-size: 1.28rem; line-height: 1.62; }
 .intro .lead { margin-bottom: 12px; }
 .intro .lead:last-child { margin-bottom: 0; }
