@@ -19,8 +19,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600&amp;family=Noto+Sans+SC:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/styles.css?v=20260920-1" />
-    <script src="/script.js?v=20260920-2" defer></script>
+    <link rel="stylesheet" href="/styles.css?v=20260921-1" />
+    <script src="/script.js?v=20260921-1" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -39,7 +39,7 @@
           <h1 id="contact-title">联系我</h1>
           <p>如需洽询编辑出版、翻译版权、活动采访或网站相关事项，请填写以下表格。</p>
         </div>
-        <form class="contact-form" action="https://api.web3forms.com/submit" method="post" data-contact-form data-sending="正在发送…" data-success="留言已成功发送！谢谢你的来信。" data-error="留言未能发送，请稍后重试。">
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="post" data-contact-form data-sending="正在发送…" data-success="留言已成功发送！谢谢你的来信。" data-error="留言未能发送，请稍后重试。" data-captcha-error="请先完成人机验证，再发送留言。">
           <input type="hidden" name="access_key" value="eaf66692-e985-4b29-9f70-c0dd161784e3" />
           <input type="hidden" name="subject" value="【伏鳞个人网站】新留言" data-contact-subject />
           <input type="hidden" name="from_name" value="伏鳞个人网站" />
@@ -48,6 +48,7 @@
           <div class="contact-field"><label for="contact-email">邮箱 <span class="required-marker" aria-hidden="true">*</span></label><input id="contact-email" name="email" type="email" autocomplete="email" required /></div>
           <div class="contact-field"><label for="contact-topic">主题</label><select id="contact-topic" name="topic"><option value="" selected>请选择主题</option><option>出版与约稿洽询</option><option>翻译、转载与版权授权</option><option>活动与采访</option><option>网站问题与建议</option><option>其他合作或咨询</option></select></div>
           <div class="contact-field"><label for="contact-message">留言 <span class="required-marker" aria-hidden="true">*</span></label><textarea id="contact-message" name="message" rows="8" maxlength="4000" required></textarea></div>
+          <div class="h-captcha contact-captcha" data-captcha="true" data-lang="zh-CN"></div>
           <button class="contact-submit" type="submit"><span data-submit-label>发送留言</span></button>
           <p class="contact-status" data-contact-status role="status" aria-live="polite"></p>
           <p class="contact-privacy">你的姓名、邮箱和留言仅用于回复本次咨询。</p>
@@ -55,5 +56,6 @@
       </section>
     </main>
     <footer class="site-footer"><div><span>© <span id="year"></span> 伏鳞 · 版权所有</span><a href="#home">返回顶部 ↑</a></div></footer>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
   </body>
 </html>

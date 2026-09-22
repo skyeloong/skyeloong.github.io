@@ -457,6 +457,13 @@ if (contactForm) {
 
   contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
+    const captchaResponse = contactForm.querySelector('[name="h-captcha-response"]');
+    if (!captchaResponse?.value) {
+      status.className = "contact-status is-error";
+      status.textContent = contactForm.dataset.captchaError;
+      return;
+    }
+
     submitButton.disabled = true;
     submitButton.setAttribute("aria-busy", "true");
     submitLabel.textContent = contactForm.dataset.sending;
@@ -476,6 +483,7 @@ if (contactForm) {
       if (!response.ok || !result.success) throw new Error(result.message || "Submission failed");
 
       contactForm.reset();
+      if (window.hcaptcha) window.hcaptcha.reset();
       status.classList.add("is-success");
       status.textContent = contactForm.dataset.success;
     } catch (error) {
